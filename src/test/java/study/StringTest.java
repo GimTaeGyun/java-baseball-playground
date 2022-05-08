@@ -29,13 +29,13 @@ public class StringTest {
         assertThat(actual1).isEqualTo("1,2");
     }
 
+    @Test
     @DisplayName("charAt 테스트")
     void request3() {
         //요구사항 3
-//        String actual3 = "abc".charAt();
         assertThatExceptionOfType(StringIndexOutOfBoundsException.class)
             .isThrownBy(() -> {
-
+                char actual1 = "abc".charAt(5);
         }).withMessageMatching("Index: \\d+, Size: \\d+");
     }
 
